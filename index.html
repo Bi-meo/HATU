@@ -16,7 +16,7 @@
     min-height: 100vh;
   }
   #quiz-container {
-    background: rgba(255,255,255,0.1);
+    background: rgba(34, 155, 199, 0.688);
     border-radius: 12px;
     width: 90%;
     max-width: 700px;
@@ -52,7 +52,7 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
   #answers button:hover:not(:disabled) {
-    background: #3d566e;
+    background: #102436;
   }
   #answers button.correct {
     background: #2ecc71 !important;
@@ -1667,7 +1667,119 @@ restartBtn.addEventListener('click', () => {
 });
 
 </script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    color: white;
+  }
+  #meteorCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<canvas id="meteorCanvas"></canvas>
 
+<script>
+const canvas = document.getElementById("meteorCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+const stars = [];
+for (let i = 0; i < 150; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5,
+    a: 0.3 + Math.random() * 0.7
+  });
+}
+
+let meteors = [];
+
+function createMeteor() {
+  meteors.push({
+    x: -20,
+    y: Math.random() * canvas.height * 0.5,
+    length: 120 + Math.random() * 80,
+    dx: 7 + Math.random() * 3,
+    dy: 3 + Math.random() * 2,
+    alpha: 1
+  });
+}
+
+function drawStars() {
+  stars.forEach(s => {
+    ctx.fillStyle = `rgba(255,255,255,${s.a})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function updateAndDrawMeteors() {
+  meteors.forEach((m, idx) => {
+    m.x += m.dx;
+    m.y += m.dy;
+    m.alpha -= 0.0007;
+
+    const endX = m.x - m.dx * (m.length / 20);
+    const endY = m.y - m.dy * (m.length / 20);
+
+    const grad = ctx.createLinearGradient(m.x, m.y, endX, endY);
+    grad.addColorStop(0, `rgba(255,255,255,${m.alpha})`);
+    grad.addColorStop(1, `rgba(255,255,255,0)`);
+
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(m.x, m.y);
+    ctx.lineTo(endX, endY);
+    ctx.stroke();
+
+    if (m.alpha <= 0 || m.x > canvas.width + 50 || m.y > canvas.height + 50) {
+      meteors.splice(idx, 1);
+    }
+  });
+}
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  drawStars();
+  updateAndDrawMeteors();
+
+  requestAnimationFrame(draw);
+}
+
+setInterval(() => {
+  if (Math.random() < 0.7) createMeteor();
+}, 800);
+
+draw();
+</script>
 
 </body>
 </html>
