@@ -180,8 +180,8 @@
 </style>
 </head>
 <body>
-
-<div style="text-align:center; margin-top: 80px;">
+  <div style="text-align:center; margin-top: 80px;">
+  <h1 id="H1_b">Quiz Thiên Văn HATU</h1>
   <button id="start-btn" style="padding: 18px 40px; font-size:1.4rem; font-weight:700; border-radius:40px; cursor:pointer; background:#ffd369; color:#2c3e50; border:none; box-shadow: 0 6px 20px #ffd369cc;">Bắt đầu làm bài</button>
   
   <!-- Đưa mode-select xuống dưới nút -->
@@ -1550,6 +1550,8 @@ function startQuiz() {
   nextBtn.style.display = 'none';
   restartBtn.style.display = 'none';
 
+  document.getElementById("H1_b").style.display="none";
+
   // Chọn chế độ
   const mode = document.querySelector('input[name="mode"]:checked').value;
 
@@ -1660,6 +1662,8 @@ restartBtn.addEventListener('click', () => {
   explanationEl.innerHTML = '';
   questionEl.innerHTML = '';
   answersEl.innerHTML = '';
+
+  document.getElementById("H1_b").style.display="block";
 });
 
 </script>
