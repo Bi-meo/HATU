@@ -1625,7 +1625,7 @@ function showScore() {
   explanationEl.innerHTML = '';
   nextBtn.style.display = 'none';
 
-  scoreEl.innerHTML = `Bạn đã trả lời đúng <b>${score}</b> trên <b>${currentQuestions.length}</b> câu hỏi.`;
+  scoreEl.innerHTML = `Bạn đã trả lời đúng <b>${score}</b> / <b>${currentQuestions.length}</b> câu hỏi.`;
 
   // Thông báo theo điểm số
   const ratio = score / currentQuestions.length;
@@ -1783,3 +1783,4 @@ draw();
 
 </body>
 </html>
+
