@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content_2="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quiz Thiên Văn Nâng Cao</title>
 <style>
   body {
@@ -1583,11 +1583,11 @@ function showQuestion() {
   messageEl.innerHTML = '';
 
   const currentQ = currentQuestions[currentIndex];
-  questionEl.textcontent = `Câu ${currentIndex + 1}: ${currentQ.question}`;
+  questionEl.textContent = `Câu ${currentIndex + 1}: ${currentQ.question}`;
   answersEl.innerHTML = '';
   currentQ.answers.forEach((answer, idx) => {
     const btn = document.createElement('button');
-    btn.textcontent = answer.text;
+    btn.textContent = answer.text;
     btn.className = '';
     btn.disabled = false;
     btn.addEventListener('click', () => selectAnswer(btn, answer.correct));
@@ -1614,13 +1614,13 @@ function selectAnswer(button, isCorrect) {
   }
 
   // Hiển thị phần giải thích
-  explanationEl.textcontent = currentQuestions[currentIndex].explanation || '';
+  explanationEl.textContent = currentQuestions[currentIndex].explanation || '';
 
   nextBtn.style.display = 'inline-block';
 }
 
 function showScore() {
-  questionEl.textcontent = 'Kết thúc bài kiểm tra!';
+  questionEl.textContent = 'Kết thúc bài kiểm tra!';
   answersEl.innerHTML = '';
   explanationEl.innerHTML = '';
   nextBtn.style.display = 'none';
@@ -1630,11 +1630,11 @@ function showScore() {
   // Thông báo theo điểm số
   const ratio = score / currentQuestions.length;
   if (ratio >= 0.8) {
-    messageEl.textcontent = "Chúc mừng bạn làm rất tốt!";
+    messageEl.textContent = "Chúc mừng bạn làm rất tốt!";
   } else if (ratio >= 0.5) {
-    messageEl.textcontent = "Cố gắng hơn vào lần sau nhé! Bạn sắp được điểm cao rồi";
+    messageEl.textContent = "Cố gắng hơn vào lần sau nhé! Bạn sắp được điểm cao rồi";
   } else {
-    messageEl.textcontent = "Chưa đạt, bạn cần luyện tập thêm!";
+    messageEl.textContent = "Chưa đạt, bạn cần luyện tập thêm!";
   }
 
   restartBtn.style.display = 'inline-block';
@@ -1674,7 +1674,7 @@ restartBtn.addEventListener('click', () => {
     height: 100%;
     color: white;
   }
-  #meteorCanvas_2 {
+  #meteorCanvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -1683,7 +1683,7 @@ restartBtn.addEventListener('click', () => {
     z-index: -1;
     pointer-events: none;
   }
-  .content_2 {
+  .content {
     position: relative;
     z-index: 1;
     padding: 40px;
@@ -1692,18 +1692,18 @@ restartBtn.addEventListener('click', () => {
 </style>
 </head>
 <body>
-<canvas id="meteorCanvas_2"></canvas>
+<canvas id="meteorCanvas"></canvas>
 
 <script>
-const canvas = document.getElementById("meteorCanvas_2");
+const canvas = document.getElementById("meteorCanvas");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas_2() {
+function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-window.addEventListener("resize", resizeCanvas_2);
-resizeCanvas_2();
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
 const stars = [];
 for (let i = 0; i < 150; i++) {
@@ -1717,7 +1717,7 @@ for (let i = 0; i < 150; i++) {
 
 let meteors = [];
 
-function createMeteor_2() {
+function createMeteor() {
   meteors.push({
     x: -20,
     y: Math.random() * canvas.height * 0.5,
@@ -1728,7 +1728,7 @@ function createMeteor_2() {
   });
 }
 
-function draw_2Stars_2() {
+function drawStars() {
   stars.forEach(s => {
     ctx.fillStyle = `rgba(255,255,255,${s.a})`;
     ctx.beginPath();
@@ -1737,7 +1737,7 @@ function draw_2Stars_2() {
   });
 }
 
-function updateAnddraw_2Meteors_2() {
+function updateAndDrawMeteors() {
   meteors.forEach((m, idx) => {
     m.x += m.dx;
     m.y += m.dy;
@@ -1763,23 +1763,22 @@ function updateAnddraw_2Meteors_2() {
   });
 }
 
-function draw_2() {
+function draw() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  draw_2Stars_2();
-  updateAnddraw_2Meteors_2();
+  drawStars();
+  updateAndDrawMeteors();
 
-  requestAnimationFrame(draw_2);
+  requestAnimationFrame(draw);
 }
 
 setInterval(() => {
-  if (Math.random() < 0.7) createMeteor_2();
+  if (Math.random() < 0.7) createMeteor();
 }, 800);
 
-draw_2();
+draw();
 </script>
 
 </body>
 </html>
-
