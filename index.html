@@ -1669,20 +1669,26 @@ restartBtn.addEventListener('click', () => {
 </script>
 <style>
   body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: white;
-  }
+  background: url('https://i.pinimg.com/1200x/7a/19/c0/7a19c00937f5e8b7b37d0b9caf4e77f0.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
   #meteorCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
   .content {
     position: relative;
     z-index: 1;
@@ -1690,21 +1696,21 @@ restartBtn.addEventListener('click', () => {
     text-align: center;
   }
 </style>
-
 <canvas id="meteorCanvas"></canvas>
 
 <script>
 const canvas = document.getElementById("meteorCanvas");
 const ctx = canvas.getContext("2d");
 
+// Resize canvas theo kích thước khung nhìn
 function resizeCanvas() {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
+// Tạo các sao tĩnh
 const stars = [];
 for (let i = 0; i < 150; i++) {
   stars.push({
@@ -1715,8 +1721,10 @@ for (let i = 0; i < 150; i++) {
   });
 }
 
+// Mảng chứa các sao băng
 let meteors = [];
 
+// Tạo sao băng mới
 function createMeteor() {
   meteors.push({
     x: -20,
@@ -1728,6 +1736,7 @@ function createMeteor() {
   });
 }
 
+// Vẽ các sao tĩnh
 function drawStars() {
   stars.forEach(s => {
     ctx.fillStyle = `rgba(255,255,255,${s.a})`;
@@ -1737,6 +1746,7 @@ function drawStars() {
   });
 }
 
+// Vẽ và cập nhật sao băng
 function updateAndDrawMeteors() {
   meteors.forEach((m, idx) => {
     m.x += m.dx;
@@ -1763,9 +1773,10 @@ function updateAndDrawMeteors() {
   });
 }
 
+// Vòng lặp animation
 function draw() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // Xoá nội dung canvas, nhưng không ảnh hưởng ảnh nền
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   drawStars();
   updateAndDrawMeteors();
@@ -1773,14 +1784,15 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
+// Tạo sao băng định kỳ
 setInterval(() => {
   if (Math.random() < 0.7) createMeteor();
 }, 800);
 
+// Bắt đầu vẽ
 draw();
 </script>
 
+
 </body>
 </html>
-
-
