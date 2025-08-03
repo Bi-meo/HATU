@@ -1583,11 +1583,11 @@ function showQuestion() {
   messageEl.innerHTML = '';
 
   const currentQ = currentQuestions[currentIndex];
-  questionEl.textcontent_2 = `Câu ${currentIndex + 1}: ${currentQ.question}`;
+  questionEl.textcontent = `Câu ${currentIndex + 1}: ${currentQ.question}`;
   answersEl.innerHTML = '';
   currentQ.answers.forEach((answer, idx) => {
     const btn = document.createElement('button');
-    btn.textcontent_2 = answer.text;
+    btn.textcontent = answer.text;
     btn.className = '';
     btn.disabled = false;
     btn.addEventListener('click', () => selectAnswer(btn, answer.correct));
@@ -1614,13 +1614,13 @@ function selectAnswer(button, isCorrect) {
   }
 
   // Hiển thị phần giải thích
-  explanationEl.textcontent_2 = currentQuestions[currentIndex].explanation || '';
+  explanationEl.textcontent = currentQuestions[currentIndex].explanation || '';
 
   nextBtn.style.display = 'inline-block';
 }
 
 function showScore() {
-  questionEl.textcontent_2 = 'Kết thúc bài kiểm tra!';
+  questionEl.textcontent_ = 'Kết thúc bài kiểm tra!';
   answersEl.innerHTML = '';
   explanationEl.innerHTML = '';
   nextBtn.style.display = 'none';
@@ -1630,11 +1630,11 @@ function showScore() {
   // Thông báo theo điểm số
   const ratio = score / currentQuestions.length;
   if (ratio >= 0.8) {
-    messageEl.textcontent_2 = "Chúc mừng bạn làm rất tốt!";
+    messageEl.textcontent = "Chúc mừng bạn làm rất tốt!";
   } else if (ratio >= 0.5) {
-    messageEl.textcontent_2 = "Cố gắng hơn vào lần sau nhé! Bạn sắp được điểm cao rồi";
+    messageEl.textcontent = "Cố gắng hơn vào lần sau nhé! Bạn sắp được điểm cao rồi";
   } else {
-    messageEl.textcontent_2 = "Chưa đạt, bạn cần luyện tập thêm!";
+    messageEl.textcontent = "Chưa đạt, bạn cần luyện tập thêm!";
   }
 
   restartBtn.style.display = 'inline-block';
