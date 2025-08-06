@@ -655,7 +655,6 @@ const allQuestions = [
     ],
     explanation: "Nhật thực toàn phần thường xảy ra khoảng mỗi 18 tháng một lần, tại những nơi khác nhau trên Trái Đất."
   },
-// BIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII-------------------------------------------------------------------------
   {
     question: "Sao chổi là gì?",
     answers: [
@@ -672,7 +671,7 @@ const allQuestions = [
       { text: "Chỉ vào Mặt Trời", correct: false },
       { text: "Quay quanh sao chổi", correct: false },
       { text: "Hướng ngược Mặt Trời", correct: true },
-      { text: "Biến mất trong bóng tối", correct: false }
+      { text: "Hướng ngược chiều bay", correct: false }
     ],
     explanation: "Đuôi sao chổi luôn hướng ngược Mặt Trời do áp suất bức xạ và gió Mặt Trời."
   },
@@ -689,7 +688,7 @@ const allQuestions = [
   {
     question: "Sao chổi Halley quay lại gần Trái Đất bao lâu/lần?",
     answers: [
-      { text: "10 năm", correct: false },
+      { text: "11 năm", correct: false },
       { text: "25 năm", correct: false },
       { text: "76 năm", correct: true },
       { text: "100 năm", correct: false }
@@ -826,16 +825,7 @@ const allQuestions = [
     ],
     explanation: "Nguyệt thực xảy ra khi Trái Đất nằm giữa Mặt Trời và Mặt Trăng, che khuất ánh sáng chiếu vào Mặt Trăng."
   },
-  {
-    question: "Sao chổi Halley quay lại Hệ Mặt Trời khoảng bao lâu một lần?",
-    answers: [
-      { text: "150 năm", correct: false },
-      { text: "76 năm", correct: true },
-      { text: "50 năm", correct: false },
-      { text: "10 năm", correct: false }
-    ],
-    explanation: "Sao chổi Halley có chu kỳ khoảng 76 năm để quay lại gần Mặt Trời."
-  },
+  
   {
     question: "Hành tinh nào quay nhanh nhất quanh trục?",
     answers: [
@@ -849,22 +839,22 @@ const allQuestions = [
   {
     question: "Hành tinh lạnh nhất trong Hệ Mặt Trời?",
     answers: [
-      { text: "Mộc Tinh", correct: false },
-      { text: "Hỏa Tinh", correct: false },
-      { text: "Thủy Tinh", correct: false },
-      { text: "Thiên Vương Tinh", correct: true }
+      { text: "Sao Hải Vương", correct: false },
+      { text: "Sao Hỏa", correct: false },
+      { text: "Sao Thủy", correct: false },
+      { text: "Sao Thiên Vương", correct: true }
     ],
     explanation: "Thiên Vương Tinh có nhiệt độ trung bình thấp nhất trong các hành tinh do vị trí xa và trục nghiêng đặc biệt."
   },
   {
     question: "Hành tinh nào có ngày dài hơn năm?",
     answers: [
-      { text: "Thổ Tinh", correct: false },
-      { text: "Kim Tinh", correct: true },
-      { text: "Mộc Tinh", correct: false },
-      { text: "Hải Vương Tinh", correct: false }
+      { text: "Sao Thổ", correct: false },
+      { text: "Sao Kim", correct: true },
+      { text: "Sao Mộc", correct: false },
+      { text: "Sao Hải Vương", correct: false }
     ],
-    explanation: "Một ngày trên Kim Tinh dài hơn cả một năm do tốc độ tự quay chậm."
+    explanation: "Một ngày trên Sao Kim dài hơn cả một năm do tốc độ tự quay chậm."
   },
   {
     question: "Hiện tượng các hành tinh xếp thẳng hàng xảy ra như thế nào?",
@@ -881,30 +871,20 @@ const allQuestions = [
     answers: [
       { text: "Trái Đất", correct: false },
       { text: "Sao Hỏa", correct: false },
-      { text: "Mộc Tinh", correct: true },
-      { text: "Kim Tinh", correct: false }
+      { text: "Sao Mộc", correct: true },
+      { text: "Sao Kim", correct: false }
     ],
-    explanation: "Mộc Tinh là hành tinh có số lượng vệ tinh tự nhiên nhiều nhất đã được phát hiện."
+    explanation: "Sao Mộc là hành tinh có số lượng vệ tinh tự nhiên nhiều nhất đã được phát hiện."
   },
   {
     question: "Hành tinh nào có khí quyển chủ yếu là CO₂?",
     answers: [
       { text: "Trái Đất", correct: false },
-      { text: "Kim Tinh", correct: true },
-      { text: "Mộc Tinh", correct: false },
-      { text: "Thủy Tinh", correct: false }
+      { text: "Sao Kim", correct: true },
+      { text: "Sao Mộc", correct: false },
+      { text: "Sao Thủy", correct: false }
     ],
-    explanation: "Khí quyển của Kim Tinh chứa hơn 96% là khí CO₂, gây ra hiệu ứng nhà kính mạnh mẽ."
-  },
-  {
-    question: "Tại sao sao chổi phát sáng khi đến gần Mặt Trời?",
-    answers: [
-      { text: "Do bị phản chiếu bởi Mặt Trăng", correct: false },
-      { text: "Do khí hậu nóng", correct: false },
-      { text: "Do băng bốc hơi tạo thành đuôi sáng", correct: true },
-      { text: "Do va chạm với hành tinh", correct: false }
-    ],
-    explanation: "Băng trên sao chổi bốc hơi do nhiệt độ cao khi đến gần Mặt Trời, tạo thành đuôi sáng hướng ngược Mặt Trời."
+    explanation: "Khí quyển của sao Kim chứa hơn 96% là khí CO₂, gây ra hiệu ứng nhà kính mạnh mẽ."
   },
   {
     question: "Siêu trăng xuất hiện bao nhiêu lần mỗi năm?",
@@ -919,32 +899,23 @@ const allQuestions = [
   {
     question: "Hành tinh nhỏ nhất trong Hệ Mặt Trời?",
     answers: [
-      { text: "Thủy Tinh", correct: true },
-      { text: "Hải Vương Tinh", correct: false },
+      { text: "Sao Thủy", correct: true },
+      { text: "Sao Hải Vương", correct: false },
       { text: "Sao Hỏa", correct: false },
-      { text: "Kim Tinh", correct: false }
+      { text: "Sao Kim", correct: false }
     ],
-    explanation: "Thủy Tinh là hành tinh nhỏ nhất trong Hệ Mặt Trời với kích thước và khối lượng nhỏ nhất."
+    explanation: "Sao Thủy là hành tinh nhỏ nhất trong Hệ Mặt Trời với kích thước và khối lượng nhỏ nhất."
   },
+
   {
-    question: "Mặt Trăng mất bao lâu để quay một vòng quanh Trái Đất?",
+    question: "Hành tinh nào có tên được đặt theo tên vị thần chiến tranh?",
     answers: [
-      { text: "7 ngày", correct: false },
-      { text: "15 ngày", correct: false },
-      { text: "27,3 ngày", correct: true },
-      { text: "30 ngày", correct: false }
+      { text: "Sao Kim", correct: false },
+      { text: "Sao Hỏa", correct: true },
+      { text: "Sao Mộc", correct: false },
+      { text: "Sao Thổ", correct: false }
     ],
-    explanation: "Mặt Trăng hoàn thành một vòng quay quanh Trái Đất trong khoảng 27,3 ngày."
-  },
-  {
-    question: "Hành tinh nào có tên theo thần chiến tranh?",
-    answers: [
-      { text: "Kim Tinh", correct: false },
-      { text: "Hỏa Tinh", correct: true },
-      { text: "Mộc Tinh", correct: false },
-      { text: "Thổ Tinh", correct: false }
-    ],
-    explanation: "Hỏa Tinh được đặt tên theo vị thần chiến tranh trong thần thoại La Mã do màu đỏ của nó."
+    explanation: "Sao Hỏa được đặt tên theo vị thần chiến tranh trong thần thoại La Mã do màu đỏ của nó."
   },
   {
     question: "Tại sao bầu trời ban đêm không hoàn toàn tối?",
@@ -959,33 +930,24 @@ const allQuestions = [
   {
     question: "Vành đai tiểu hành tinh nằm giữa 2 hành tinh nào?",
     answers: [
-      { text: "Sao Hỏa và Mộc Tinh", correct: true },
-      { text: "Mộc Tinh và Thổ Tinh", correct: false },
-      { text: "Kim Tinh và Trái Đất", correct: false },
-      { text: "Thủy Tinh và Kim Tinh", correct: false }
+      { text: "Sao Hỏa và Sao Mộc", correct: true },
+      { text: "Sao Mộc và Sao Thổ", correct: false },
+      { text: "Sao Kim và Trái Đất", correct: false },
+      { text: "Sao Thủy và Sao Kim", correct: false }
     ],
     explanation: "Vành đai tiểu hành tinh chính nằm giữa quỹ đạo của Sao Hỏa và Mộc Tinh."
   },
   {
     question: "Hành tinh nào có trục nghiêng nhiều nhất?",
     answers: [
-      { text: "Kim Tinh", correct: false },
-      { text: "Thiên Vương Tinh", correct: true },
-      { text: "Hỏa Tinh", correct: false },
-      { text: "Hải Vương Tinh", correct: false }
-    ],
-    explanation: "Thiên Vương Tinh có trục quay nghiêng khoảng 98 độ, gần như nằm ngang so với quỹ đạo."
-  },
-  {
-    question: "Hành tinh nào có ít vệ tinh nhất?",
-    answers: [
-      { text: "Kim Tinh", correct: true },
+      { text: "Sao Kim", correct: false },
+      { text: "Sao Thiên Vương", correct: true },
       { text: "Sao Hỏa", correct: false },
-      { text: "Trái Đất", correct: false },
-      { text: "Mộc Tinh", correct: false }
+      { text: "Sao Hải Vương", correct: false }
     ],
-    explanation: "Kim Tinh là hành tinh có ít vệ tinh tự nhiên nhất, chỉ có 1 vệ tinh là Triton."
+    explanation: "Sao Thiên Vương có trục quay nghiêng khoảng 98 độ, gần như nằm ngang so với quỹ đạo."
   },
+
   {
     question: "Khi nào chúng ta có thể nhìn thấy sao chổi dễ dàng?",
     answers: [
@@ -1011,7 +973,7 @@ const allQuestions = [
     answers: [
       { text: "Ánh sáng phản chiếu của Mặt Trời", correct: true },
       { text: "Ánh sáng từ các hành tinh", correct: false },
-      { text: "Lửa trên Mặt Trăng", correct: false },
+      { text: "Lõi phát sáng trên Mặt Trăng", correct: false },
       { text: "Ánh sáng từ vũ trụ", correct: false }
     ],
     explanation: "Ánh sáng Mặt Trăng là ánh sáng phản chiếu từ Mặt Trời chứ không phải phát ra từ nó."
@@ -1056,16 +1018,7 @@ const allQuestions = [
     ],
     explanation: "Bề mặt Sao Hỏa có màu đỏ do hàm lượng lớn sắt bị oxy hóa tạo ra lớp bụi đỏ."
   },
-  {
-    question: "Mặt Trăng có ảnh hưởng gì đến Trái Đất?",
-    answers: [
-      { text: "Gây thủy triều", correct: true },
-      { text: "Gây nhật thực", correct: false },
-      { text: "Tạo khí hậu", correct: false },
-      { text: "Làm thay đổi mùa", correct: false }
-    ],
-    explanation: "Mặt Trăng gây ra lực hấp dẫn làm thủy triều trên Trái Đất."
-  },
+
   {
     question: "Hiện tượng nào khiến sao chổi có đuôi?",
     answers: [
@@ -1079,20 +1032,20 @@ const allQuestions = [
   {
     question: "Hành tinh nào quay ngược chiều so với phần lớn hành tinh khác?",
     answers: [
-      { text: "Kim Tinh", correct: true },
-      { text: "Mộc Tinh", correct: false },
-      { text: "Hỏa Tinh", correct: false },
-      { text: "Hải Vương Tinh", correct: false }
+      { text: "Sao Kim", correct: true },
+      { text: "Sao Mộc", correct: false },
+      { text: "Sao Hỏa", correct: false },
+      { text: "Sao Hải Vương", correct: false }
     ],
-    explanation: "Kim Tinh quay ngược chiều so với phần lớn các hành tinh khác trong Hệ Mặt Trời."
+    explanation: "sao Kim quay ngược chiều so với phần lớn các hành tinh khác trong Hệ Mặt Trời."
   },
   {
     question: "Một năm trên sao Hỏa kéo dài bao nhiêu ngày Trái Đất?",
     answers: [
-      { text: "180 ngày", correct: false },
+      { text: "188 ngày", correct: false },
       { text: "687 ngày", correct: true },
       { text: "365 ngày", correct: false },
-      { text: "450 ngày", correct: false }
+      { text: "452 ngày", correct: false }
     ],
     explanation: "Một năm trên sao Hỏa tương đương khoảng 687 ngày Trái Đất."
   },
@@ -1116,36 +1069,18 @@ const allQuestions = [
     ],
     explanation: "Mặt Trăng không có bầu khí quyển đáng kể như Trái Đất."
   },
-  {
-    question: "Hành tinh nào có hệ thống vành đai nổi bật nhất?",
-    answers: [
-      { text: "Mộc Tinh", correct: false },
-      { text: "Thổ Tinh", correct: true },
-      { text: "Hải Vương Tinh", correct: false },
-      { text: "Kim Tinh", correct: false }
-    ],
-    explanation: "Thổ Tinh có hệ thống vành đai rộng và rõ nét nhất trong Hệ Mặt Trời."
-  },
+
   {
     question: "“Siêu Trăng” là gì?",
     answers: [
       { text: "Mặt Trăng mọc ở hướng Tây", correct: false },
       { text: "Mặt Trăng đi vào bóng Trái Đất", correct: false },
       { text: "Mặt Trăng ở gần Trái Đất và tròn nhất", correct: true },
-      { text: "Nhật thực xảy ra", correct: false }
+      { text: "Lần trăng tròn thứ hai trong tháng", correct: false }
     ],
     explanation: "Siêu Trăng xảy ra khi Mặt Trăng ở vị trí gần Trái Đất nhất và ở pha tròn."
   },
-  {
-    question: "Nhật thực chỉ xảy ra khi?",
-    answers: [
-      { text: "Mặt Trăng nằm giữa Trái Đất và Mặt Trời", correct: true },
-      { text: "Mặt Trời nằm giữa Trái Đất và Mặt Trăng", correct: false },
-      { text: "Trái Đất nằm giữa Mặt Trăng và Mặt Trời", correct: false },
-      { text: "Mặt Trăng ở phía xa Mặt Trời", correct: false }
-    ],
-    explanation: "Nhật thực xảy ra khi Mặt Trăng nằm giữa Trái Đất và Mặt Trời, che khuất ánh sáng Mặt Trời."
-  },
+
   {
     question: "Tại sao ban đêm có thể thấy các hành tinh?",
     answers: [
@@ -1159,12 +1094,12 @@ const allQuestions = [
   {
     question: "Hành tinh nào có lực hấp dẫn mạnh nhất?",
     answers: [
-      { text: "Thổ Tinh", correct: false },
+      { text: "Sao Thổ", correct: false },
       { text: "Trái Đất", correct: false },
-      { text: "Mộc Tinh", correct: true },
-      { text: "Hải Vương Tinh", correct: false }
+      { text: "Sao Mộc", correct: true },
+      { text: "Sao Hải Vương", correct: false }
     ],
-    explanation: "Mộc Tinh là hành tinh lớn nhất nên có lực hấp dẫn mạnh nhất."
+    explanation: "Sao Mộc là hành tinh lớn nhất nên có lực hấp dẫn mạnh nhất."
   },
   {
     question: "Mặt Trời cách Trái Đất khoảng bao xa?",
@@ -1176,22 +1111,13 @@ const allQuestions = [
     ],
     explanation: "Khoảng cách trung bình từ Trái Đất đến Mặt Trời là khoảng 150 triệu km."
   },
-  {
-    question: "Trong nhật thực toàn phần, phần nào bị che khuất?",
-    answers: [
-      { text: "Mặt Trời", correct: true },
-      { text: "Mặt Trăng", correct: false },
-      { text: "Trái Đất", correct: false },
-      { text: "Sao Kim", correct: false }
-    ],
-    explanation: "Trong nhật thực toàn phần, Mặt Trời bị Mặt Trăng che khuất hoàn toàn."
-  },
+ 
   {
     question: "Vệ tinh tự nhiên duy nhất của Trái Đất là?",
     answers: [
       { text: "Sao Hỏa", correct: false },
       { text: "Mặt Trăng", correct: true },
-      { text: "Sao Thủy", correct: false },
+      { text: "Triton", correct: false },
       { text: "Sao Kim", correct: false }
     ],
     explanation: "Mặt Trăng là vệ tinh tự nhiên duy nhất quay quanh Trái Đất."
@@ -1236,36 +1162,7 @@ const allQuestions = [
     ],
     explanation: "Do Trái Đất nghiêng và chuyển động quanh Mặt Trời làm thay đổi thời gian mặt trời mọc."
   },
-  {
-    question: "Thiết bị nào dùng để quan sát sao chổi?",
-    answers: [
-      { text: "Kính lúp", correct: false },
-      { text: "Kính thiên văn", correct: true },
-      { text: "Kính viễn vọng", correct: false },
-      { text: "Kính hiển vi", correct: false }
-    ],
-    explanation: "Kính thiên văn là thiết bị dùng để quan sát các vật thể ở xa như sao chổi."
-  },
-  {
-    question: "Kỳ nguyệt thực tiếp theo xảy ra vào?",
-    answers: [
-      { text: "Hàng ngày", correct: false },
-      { text: "Hàng tuần", correct: false },
-      { text: "Theo lịch thiên văn cụ thể", correct: true },
-      { text: "Khi trời mưa", correct: false }
-    ],
-    explanation: "Nguyệt thực xảy ra theo các chu kỳ và được dự báo cụ thể trong lịch thiên văn."
-  },
-  {
-    question: "Khi nhìn thấy nhiều hành tinh trên trời cùng lúc là vì?",
-    answers: [
-      { text: "Chúng to hơn bình thường", correct: false },
-      { text: "Trái Đất quay nhanh hơn", correct: false },
-      { text: "Chúng xếp gần nhau trên quỹ đạo", correct: true },
-      { text: "Có mưa sao băng", correct: false }
-    ],
-    explanation: "Hiện tượng các hành tinh cùng xuất hiện do chúng xếp gần nhau trên quỹ đạo quanh Mặt Trời."
-  },
+ 
   {
     question: "Nhật thực toàn phần nhìn thấy rõ nhất ở đâu?",
     answers: [
@@ -1281,7 +1178,7 @@ const allQuestions = [
     answers: [
       { text: "Elip rất dẹt", correct: true },
       { text: "Hình tròn", correct: false },
-      { text: "Hình vuông", correct: false },
+      { text: "Đường thẳng", correct: false },
       { text: "Xoắn ốc", correct: false }
     ],
     explanation: "Sao chổi di chuyển theo quỹ đạo elip rất dẹt quanh Mặt Trời."
@@ -1324,7 +1221,7 @@ const allQuestions = [
       { text: "Sao Hỏa", correct: false },
       { text: "Sao Hải Vương", correct: false }
     ],
-    explanation: "Sao Thủy là hành tinh gần Mặt Trời nhất, nên nó quay nhanh nhất quanh Mặt Trời."
+    explanation: "Sao Thủy là hành tinh quay nhanh nhất quanh Mặt Trời, nó chỉ mất 88 ngày Trái Đất để hoằn thành một vòng quỹ đạo."
   },
   {
     question: "Khi nào một hành tinh được gọi là “hành tinh khí khổng lồ”?",
@@ -1336,28 +1233,10 @@ const allQuestions = [
     ],
     explanation: "Hành tinh khí khổng lồ là những hành tinh có kích thước lớn và chủ yếu gồm các khí như hydro và heli."
   },
+  
+
   {
-    question: "Điều gì xảy ra trong nguyệt thực toàn phần?",
-    answers: [
-      { text: "Mặt Trời biến mất", correct: false },
-      { text: "Trái Đất bị che khuất", correct: false },
-      { text: "Mặt Trăng đi vào bóng của Trái Đất", correct: true },
-      { text: "Mặt Trăng chạm vào Mặt Trời", correct: false }
-    ],
-    explanation: "Nguyệt thực toàn phần xảy ra khi Mặt Trăng hoàn toàn đi vào bóng tối của Trái Đất."
-  },
-  {
-    question: "Tại sao sao chổi có đuôi?",
-    answers: [
-      { text: "Do bốc hơi khi đến gần Mặt Trời", correct: true },
-      { text: "Do gió từ Mặt Trăng", correct: false },
-      { text: "Do va chạm với hành tinh khác", correct: false },
-      { text: "Do tự phát sáng", correct: false }
-    ],
-    explanation: "Khi đến gần Mặt Trời, băng và các chất dễ bay hơi trên sao chổi bốc hơi tạo thành đuôi sáng."
-  },
-  {
-    question: "“Sao hôm” và “sao mai” thường là hành tinh nào?",
+    question: "“Sao hôm” và “sao mai” là tên gọi khác của hành tinh nào?",
     answers: [
       { text: "Sao Kim", correct: true },
       { text: "Sao Hỏa", correct: false },
@@ -1376,16 +1255,7 @@ const allQuestions = [
     ],
     explanation: "Sao Hải Vương nằm xa Mặt Trời nhất trong các hành tinh và có thời gian quay quanh Mặt Trời lâu nhất."
   },
-  {
-    question: "Siêu trăng có thể lớn hơn bao nhiêu % so với trăng tròn thông thường?",
-    answers: [
-      { text: "2%", correct: false },
-      { text: "14%", correct: true },
-      { text: "25%", correct: false },
-      { text: "50%", correct: false }
-    ],
-    explanation: "Siêu trăng có kích thước nhìn thấy lớn hơn khoảng 14% so với trăng tròn thông thường do khoảng cách gần Trái Đất hơn."
-  },
+
   {
     question: "Tại sao không nhìn thấy các ngôi sao ban ngày?",
     answers: [
@@ -1406,16 +1276,7 @@ const allQuestions = [
     ],
     explanation: "Sao Kim có bầu khí quyển dày chứa nhiều CO₂ gây hiệu ứng nhà kính mạnh làm bề mặt cực kỳ nóng."
   },
-  {
-    question: "Mặt Trăng hoàn thành một vòng quay quanh Trái Đất mất khoảng bao lâu?",
-    answers: [
-      { text: "27,3 ngày", correct: true },
-      { text: "30 ngày", correct: false },
-      { text: "20 ngày", correct: false },
-      { text: "15 ngày", correct: false }
-    ],
-    explanation: "Mặt Trăng mất khoảng 27,3 ngày để hoàn thành một vòng quay quanh Trái Đất."
-  },
+ 
   {
     question: "Sự kiện thiên văn nào cần thiết bị đặc biệt để quan sát an toàn?",
     answers: [
@@ -1430,9 +1291,9 @@ const allQuestions = [
     question: "Mưa sao băng xảy ra khi?",
     answers: [
       { text: "Trái Đất đi qua đám bụi của sao chổi", correct: true },
-      { text: "Mặt Trời nổ", correct: false },
-      { text: "Hành tinh cháy", correct: false },
-      { text: "Mặt Trăng tan", correct: false }
+      { text: "Có mưa băng từ vũ trụ", correct: false },
+      { text: "Một ngôi sao bốc cháy", correct: false },
+      { text: "Thiên thạch va vào trái đất", correct: false }
     ],
     explanation: "Mưa sao băng xảy ra khi Trái Đất di chuyển qua các đám bụi còn sót lại từ sao chổi."
   },
@@ -1446,26 +1307,7 @@ const allQuestions = [
     ],
     explanation: "Hiện tượng các hành tinh nằm trên cùng một đường thẳng gọi là hiện tượng liên hành tinh."
   },
-  {
-    question: "Hành tinh nào lạnh nhất trong Hệ Mặt Trời?",
-    answers: [
-      { text: "Sao Thổ", correct: false },
-      { text: "Sao Hỏa", correct: false },
-      { text: "Sao Hải Vương", correct: true },
-      { text: "Trái Đất", correct: false }
-    ],
-    explanation: "Sao Hải Vương là hành tinh xa Mặt Trời nhất nên có nhiệt độ lạnh nhất."
-  },
-  {
-    question: "Ánh sáng từ Mặt Trời đến Trái Đất mất bao lâu?",
-    answers: [
-      { text: "2 giây", correct: false },
-      { text: "3 phút", correct: false },
-      { text: "8 phút 20 giây", correct: true },
-      { text: "1 giờ", correct: false }
-    ],
-    explanation: "Ánh sáng Mặt Trời mất khoảng 8 phút 20 giây để truyền tới Trái Đất."
-  },
+
   {
     question: "Tại sao hành tinh không phát sáng?",
     answers: [
@@ -1476,16 +1318,7 @@ const allQuestions = [
     ],
     explanation: "Hành tinh không phát sáng vì chúng không tự tạo ra năng lượng, chỉ phản chiếu ánh sáng Mặt Trời."
   },
-  {
-    question: "Mặt Trăng ảnh hưởng đến hiện tượng nào trên Trái Đất?",
-    answers: [
-      { text: "Thủy triều", correct: true },
-      { text: "Mưa", correct: false },
-      { text: "Gió", correct: false },
-      { text: "Ánh sáng ban ngày", correct: false }
-    ],
-    explanation: "Sức hút của Mặt Trăng gây ra hiện tượng thủy triều trên Trái Đất."
-  },
+
   {
     question: "Thiên thạch có thể gây hại nếu?",
     answers: [
@@ -1500,8 +1333,8 @@ const allQuestions = [
     question: "Tại sao Trái Đất có các mùa trong năm?",
     answers: [
       { text: "Do trục nghiêng và quỹ đạo quanh Mặt Trời", correct: true },
-      { text: "Do tự quay", correct: false },
-      { text: "Do Mặt Trăng", correct: false },
+      { text: "Do sự tự quay", correct: false },
+      { text: "Do chu kì Mặt Trời", correct: false },
       { text: "Do Mặt Trời quay", correct: false }
     ],
     explanation: "Trục nghiêng của Trái Đất và quỹ đạo quanh Mặt Trời tạo ra sự thay đổi góc chiếu sáng, dẫn đến các mùa."
@@ -1799,6 +1632,7 @@ draw();
 
 </body>
 </html>
+
 
 
 
