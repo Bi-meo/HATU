@@ -273,20 +273,30 @@ const allQuestions = [
     question: "Sao Kim được biết đến với tên gọi gì?",
     answers: [
       { text: "Sao Hôm", correct: true },
-      { text: "Sao Mai", correct: false },
-      { text: "Sao Thủy", correct: false },
-      { text: "Sao Mộc", correct: false }
+      { text: "Sao Sư Tử", correct: false },
+      { text: "Hành tinh đỏ", correct: false },
+      { text: "Sao Sa", correct: false }
     ],
     explanation: "Sao Kim còn được gọi là Sao Hôm vì nó thường xuất hiện sáng rực vào buổi tối."
   },
+  {
+    question: "Sao Mai là tên gọi khác của hành tinh nào dưới đây?",
+    answers: [
+      { text: "Sao Kim", correct: true },
+      { text: "Sao Mộc", correct: false },
+      { text: "Hành Thổ", correct: false },
+      { text: "Sao Thủy", correct: false }
+    ],
+    explanation: "Sao Kim còn được gọi bằng các tên gọi khác như Sao Hôm hay Sao Mai."
+  },
 
   {
-    question: "Sao Mộc là hành tinh lớn nhất trong hệ Mặt Trời?",
+    question: "Đâu là hành tinh lớn nhất trong hệ Mặt Trời?",
     answers: [
-      { text: "Đúng", correct: true },
-      { text: "Sai", correct: false },
-      { text: "Cỡ trung bình", correct: false },
-      { text: "Nhỏ nhất", correct: false }
+      { text: "Sao Mộc", correct: true },
+      { text: "Sao Thổ", correct: false },
+      { text: "Trái Đất", correct: false },
+      { text: "Sao Thiên Vương", correct: false }
     ],
     explanation: "Sao Mộc là hành tinh lớn nhất trong hệ Mặt Trời với kích thước và khối lượng vượt trội."
   },
@@ -303,14 +313,14 @@ const allQuestions = [
   },
 
   {
-    question: "Ngân Hà là gì?",
+    question: "Dải Ngân Hà là gì?",
     answers: [
       { text: "Một thiên hà chứa Trái Đất", correct: true },
-      { text: "Một hành tinh", correct: false },
-      { text: "Một ngôi sao", correct: false },
-      { text: "Một vệ tinh", correct: false }
+      { text: "Một dãy các hành tinh", correct: false },
+      { text: "Tên của một tinh vân", correct: false },
+      { text: "Tên gọi khác của Vũ trụ", correct: false }
     ],
-    explanation: "Ngân Hà là thiên hà mà Trái Đất và hệ Mặt Trời đang nằm trong đó."
+    explanation: "Dải Ngân Hà (hay Milky Way) là thiên hà mà Trái Đất và hệ Mặt Trời đang nằm trong đó."
   },
 
   {
@@ -331,17 +341,17 @@ const allQuestions = [
       { text: "5 lớp", correct: false },
       { text: "6 lớp", correct: true }
     ],
-    explanation: "Mặt Trời có 6 lớp chính: nhân, vùng bức xạ, vùng đối lưu, quang quyển, sắc quyển và nhật hoa."
+    explanation: "Mặt Trời có 6 lớp chính: lõi, vùng bức xạ, vùng đối lưu, quang quyển, sắc quyển và nhật hoa."
   },
   {
     question: "Hiện tượng nào xảy ra khi Mặt Trời phát ra các vụ nổ năng lượng mạnh?",
     answers: [
       { text: "Nhật thực", correct: false },
       { text: "Tia gamma", correct: false },
-      { text: "Bão Mặt Trời (solar flare)", correct: true },
-      { text: "Vòng nhật hoa", correct: false }
+      { text: "Bão Mặt Trời", correct: true },
+      { text: "Xuất hiện vòng nhật hoa", correct: false }
     ],
-    explanation: "Bão Mặt Trời là các vụ bùng nổ năng lượng mạnh từ bề mặt Mặt Trời."
+    explanation: "Bão Mặt Trời (solar flare) là các vụ bùng nổ năng lượng mạnh từ bề mặt Mặt Trời."
   },
   {
     question: "Tại sao Mặt Trời có màu vàng khi nhìn từ Trái Đất?",
@@ -357,8 +367,8 @@ const allQuestions = [
     question: "Ánh sáng từ Mặt Trời đến Trái Đất mất bao lâu?",
     answers: [
       { text: "3 giây", correct: false },
-      { text: "2 phút", correct: false },
-      { text: "10 phút", correct: false },
+      { text: "Khoảng 2 phút 13 giây", correct: false },
+      { text: "Hơn 10 phút", correct: false },
       { text: "Khoảng 8 phút 20 giây", correct: true }
     ],
     explanation: "Ánh sáng di chuyển với tốc độ khoảng 300.000 km/s và mất khoảng 8 phút 20 giây để đến Trái Đất từ Mặt Trời."
@@ -376,7 +386,7 @@ const allQuestions = [
   {
     question: "Mặt Trăng quay quanh Trái Đất mất bao nhiêu ngày?",
     answers: [
-      { text: "15 ngày", correct: false },
+      { text: "1 ngày", correct: false },
       { text: "27,3 ngày", correct: true },
       { text: "30 ngày", correct: false },
       { text: "365 ngày", correct: false }
@@ -413,16 +423,7 @@ const allQuestions = [
     ],
     explanation: "Lực hút của Mặt Trăng là nguyên nhân chính tạo ra hiện tượng thủy triều trên Trái Đất."
   },
-  {
-    question: "Sao Thủy là hành tinh...?",
-    answers: [
-      { text: "Nóng nhất", correct: false },
-      { text: "Có nhiều vệ tinh", correct: false },
-      { text: "Gần Mặt Trời nhất", correct: true },
-      { text: "Lớn nhất", correct: false }
-    ],
-    explanation: "Sao Thủy là hành tinh gần Mặt Trời nhất, nhưng không phải là nóng nhất."
-  },
+  
   {
     question: "Sao Thủy không có vệ tinh tự nhiên vì...?",
     answers: [
@@ -464,7 +465,7 @@ const allQuestions = [
     explanation: "Một ngày là thời gian Trái Đất quay một vòng quanh trục – khoảng 24 giờ."
   },
   {
-    question: "Tầng khí quyển nào bảo vệ khỏi tia cực tím?",
+    question: "Tầng khí quyển nào bảo vệ Trái Đất khỏi tia cực tím?",
     answers: [
       { text: "Tầng đối lưu", correct: false },
       { text: "Tầng bình lưu", correct: false },
@@ -515,14 +516,14 @@ const allQuestions = [
   },
 
   {
-    question: "Vòng quanh Sao Thổ được tạo bởi...?",
+    question: "Vành đai Sao Thổ được tạo bởi...?",
     answers: [
       { text: "Không khí", correct: false },
       { text: "Từ trường", correct: false },
       { text: "Băng, bụi và đá", correct: true },
       { text: "Ánh sáng", correct: false }
     ],
-    explanation: "Vòng quanh Sao Thổ gồm hàng tỷ mảnh băng, bụi và đá nhỏ quay quanh hành tinh này."
+    explanation: "Vành đai Sao Thổ gồm hàng tỷ mảnh băng, bụi và đá nhỏ quay quanh hành tinh này."
   },
   {
     question: "Sao Thổ có mật độ...?",
@@ -560,7 +561,7 @@ const allQuestions = [
       { text: "500 km/h", correct: false },
       { text: "1.000 km/h", correct: false },
       { text: "2.100 km/h", correct: true },
-      { text: "4.000 km/h", correct: false }
+      { text: "4.500 km/h", correct: false }
     ],
     explanation: "Sao Hải Vương có những cơn gió mạnh nhất hệ Mặt Trời, lên tới 2.100 km/h."
   },
@@ -600,7 +601,7 @@ const allQuestions = [
       { text: "Trăng non", correct: false },
       { text: "Trăng tròn", correct: true },
       { text: "Trăng khuyết", correct: false },
-      { text: "Nhật thực", correct: false }
+      { text: "Tối hôm có Nhật thực", correct: false }
     ],
     explanation: "Nguyệt thực xảy ra khi Trái Đất nằm giữa Mặt Trăng và Mặt Trời – chỉ có thể xảy ra vào lúc trăng tròn."
   },
@@ -638,7 +639,7 @@ const allQuestions = [
     question: "Nhật thực hình khuyên xảy ra khi...?",
     answers: [
       { text: "Mặt Trăng gần Trái Đất", correct: false },
-      { text: "Mặt Trăng nhỏ hơn Mặt Trời", correct: true },
+      { text: "Mặt Trăng xa Trái Đất", correct: true },
       { text: "Mặt Trăng che toàn bộ Mặt Trời", correct: false },
       { text: "Vào ban đêm", correct: false }
     ],
@@ -648,12 +649,13 @@ const allQuestions = [
     question: "Nhật thực toàn phần tiếp theo thường cách nhau...?",
     answers: [
       { text: "1 năm", correct: false },
-      { text: "Vài tuần", correct: false },
+      { text: "1 tháng", correct: false },
       { text: "Khoảng 18 tháng", correct: true },
-      { text: "5 ngày", correct: false }
+      { text: "Khoảng 1 tuần", correct: false }
     ],
     explanation: "Nhật thực toàn phần thường xảy ra khoảng mỗi 18 tháng một lần, tại những nơi khác nhau trên Trái Đất."
   },
+// BIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII-------------------------------------------------------------------------
   {
     question: "Sao chổi là gì?",
     answers: [
@@ -1797,6 +1799,7 @@ draw();
 
 </body>
 </html>
+
 
 
 
